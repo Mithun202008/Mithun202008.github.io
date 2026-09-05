@@ -94,6 +94,20 @@ export default function Projects({ onSelectProject }) {
                     {project.tagline}
                   </p>
                 </div>
+
+                {/* Optional Project Image / 3D Render Banner */}
+                {project.image && (
+                  <div className="mt-3 relative rounded overflow-hidden aspect-video border border-cyber-border/80 bg-cyber-dark group-hover:border-cyber-neon/40 transition-colors">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 right-2 px-2 py-0.5 rounded bg-cyber-void/85 text-[10px] font-mono text-cyber-neon border border-cyber-border">
+                      3D RENDER
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Card Tech Stack & Actions */}

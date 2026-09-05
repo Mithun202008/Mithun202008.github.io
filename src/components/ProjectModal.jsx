@@ -40,6 +40,20 @@ export default function ProjectModal({ project, onClose }) {
             </p>
           </div>
 
+          {/* Project Image / 3D Render Feature */}
+          {project.image && (
+            <div className="relative rounded overflow-hidden aspect-video border border-cyber-border bg-cyber-dark">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded bg-cyber-void/90 text-xs font-mono text-cyber-neon border border-cyber-border">
+                BLENDER 3D CYCLES RENDER
+              </div>
+            </div>
+          )}
+
           {/* Key Metrics / Highlights */}
           {project.metrics && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">

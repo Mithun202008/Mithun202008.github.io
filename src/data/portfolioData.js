@@ -98,45 +98,18 @@ export const projectsData = [
   },
   {
     id: "005",
-    slug: "ecommerce-platform",
-    title: "Full-Stack E-Commerce Engine",
-    domain: "Full-Stack Web",
-    status: "COMPLETED",
-    featured: false,
-    tagline: "E-commerce platform featuring catalog filtering, shopping cart state management, and checkout flows.",
-    description: "Built an end-to-end full-stack e-commerce web platform. Implemented responsive product showcases, relational/document database schemas, state management for user carts, and checkout validation.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/Mithun202008/e-commerce-project",
-    live: null,
-    metrics: ["Cart State Sync", "Modular Catalog", "Secure APIs"]
-  },
-  {
-    id: "006",
-    slug: "chat-application",
-    title: "Real-Time WebSocket Chat Application",
-    domain: "Web & Systems",
-    status: "COMPLETED",
-    featured: false,
-    tagline: "Bidirectional real-time chat application with instant messaging rooms.",
-    description: "Constructed a low-latency real-time chat service leveraging WebSocket protocols. Supports active channel rooms, live typing indicators, and instant message broadcast across connected clients.",
-    techStack: ["JavaScript", "Node.js", "Socket.io", "Express.js", "HTML5/CSS3"],
-    github: "https://github.com/Mithun202008",
-    live: null,
-    metrics: ["Low-Latency Sockets", "Multi-Room Broadcast", "Client Sync"]
-  },
-  {
-    id: "007",
-    slug: "blogging-platform",
-    title: "Dynamic Content & Blogging Platform",
-    domain: "Web & Systems",
-    status: "COMPLETED",
-    featured: false,
-    tagline: "Markdown-powered content creation and publication platform.",
-    description: "Developed a dynamic web publication platform supporting rich text/Markdown authoring, tag-based categorization, article indexing, and responsive reading views.",
-    techStack: ["JavaScript", "Node.js", "Express.js", "REST APIs", "CSS3"],
-    github: "https://github.com/Mithun202008",
-    live: null,
-    metrics: ["Markdown Parsing", "Fast Article Indexing", "REST Architecture"]
+    slug: "blender-donut",
+    title: "Blender 3D Donut & Coffee Scene",
+    domain: "3D Design & Modeling",
+    status: "RENDERED",
+    featured: true,
+    image: "./blender-donut.jpg",
+    tagline: "Photorealistic 3D donut and coffee composition modeled, textured, illuminated, and rendered in Blender 3D.",
+    description: "Created a complete 3D scene from scratch in Blender featuring procedural icing with realistic dripping physics, geometry node-based sprinkle scattering, displacement-textured ceramic plate, and procedural coffee shaders with foam bubbles under realistic three-point lighting and depth of field.",
+    techStack: ["Blender 3D", "Cycles Render", "Geometry Nodes", "Procedural Texturing", "Lighting & Shading"],
+    github: null,
+    live: "./blender-donut.jpg",
+    metrics: ["Cycles Render Engine", "Geometry Nodes Sprinkles", "Procedural Shaders", "Photorealistic Lighting"]
   }
 ];
 
