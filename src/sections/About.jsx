@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Cpu, Cloud, Terminal, GraduationCap, Award, Database, Network } from 'lucide-react';
+import { Shield, Cpu, Cloud, Box, GraduationCap, Award, Database, Network } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function About() {
@@ -20,9 +20,9 @@ export default function About() {
       desc: "Designing multithreaded backend tools, protocol validators (HTTP, SOCKS4/5), and automated testing suites."
     },
     {
-      icon: Terminal,
-      title: "Data & Web Engineering",
-      desc: "Experience building data-intensive UIs handling 50,000+ browser records, modern React/TypeScript architectures, and REST APIs."
+      icon: Box,
+      title: "3D Design & Modeling",
+      desc: "Crafting original 3D models, scene environments, lighting, and assets utilizing Blender."
     }
   ];
 
@@ -93,7 +93,7 @@ export default function About() {
                 I am a second-year <strong className="text-cyber-heading">Computer Science and Engineering</strong> student at <strong className="text-cyber-cyan">Chennai Institute of Technology</strong> with a strong academic standing (<strong className="text-cyber-neon">8.55 / 10 CGPA</strong>).
               </p>
               <p>
-                My focus centers on practical engineering: building functional open-source command-line software, exploring network security protocols, optimizing large datasets in browser environments, and deploying cloud-native web architectures. Rather than theoretical projects, I design real software tools with multi-platform installers, automated test suites, and clean documentation.
+                My focus centers on practical engineering: building functional open-source command-line software, exploring network security protocols, creating 3D models with Blender, and deploying cloud-native web architectures. Rather than theoretical projects, I design real software tools with multi-platform installers, automated test suites, and clean documentation.
               </p>
             </div>
 
@@ -133,8 +133,8 @@ export default function About() {
                 <div className="text-[10px] text-cyber-muted tracking-wider">LEETCODE PROBLEMS</div>
               </div>
               <div className="p-2.5 rounded bg-cyber-dark/80 border border-cyber-border text-center">
-                <div className="text-lg font-bold text-cyber-amber">50,000+</div>
-                <div className="text-[10px] text-cyber-muted tracking-wider">RECORDS RENDERED</div>
+                <div className="text-lg font-bold text-cyber-amber">BLENDER</div>
+                <div className="text-[10px] text-cyber-muted tracking-wider">3D MODELING</div>
               </div>
               <div className="p-2.5 rounded bg-cyber-dark/80 border border-cyber-border text-center">
                 <div className="text-lg font-bold text-cyber-text">PROXC</div>

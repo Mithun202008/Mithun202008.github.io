@@ -1,8 +1,8 @@
 export const personalData = {
   name: "Mithun A",
   fullName: "Mithun Anbazhagan",
-  callsign: "MITHUN // SYSTEM",
-  systemVersion: "v2.6.4",
+  callsign: "Mithun A",
+  systemVersion: "2.0",
   status: "ONLINE",
   availability: "AVAILABLE FOR OPPORTUNITIES",
   location: "Tamil Nadu, India",
@@ -16,7 +16,7 @@ export const personalData = {
     "Cloud Computing Enthusiast",
     "Cybersecurity Explorer",
     "Software Developer",
-    "Systems & Network Engineer"
+    "3D Designer (Blender)"
   ],
   interests: [
     "Cloud Computing",
@@ -25,6 +25,7 @@ export const personalData = {
     "AI/ML",
     "Linux Systems",
     "Web Technologies",
+    "3D Modeling & Design",
     "Problem Solving / DSA"
   ],
   resumeLink: "https://drive.google.com/file/d/1fEmkQrOt0pAiUJDFTTJ8DDyUnEIepaEI/view?usp=sharing",
@@ -74,12 +75,12 @@ export const projectsData = [
     domain: "Web & Systems",
     status: "ACTIVE",
     featured: true,
-    tagline: "Web-based data management engine engineered to process and visualize 50,000+ records directly in the browser.",
-    description: "Engineered a data-heavy enterprise UI designed to simulate, manipulate, and render over 50,000 live data records without DOM freezing or memory leaks. Implemented client-side memory optimizations, efficient chunking, and responsive state synchronization to overcome browser rendering bottlenecks.",
+    tagline: "Web-based data management engine engineered for high-throughput data processing and real-time visualization directly in the browser.",
+    description: "Engineered a data-heavy enterprise UI designed to simulate, manipulate, and stream extensive live data records without DOM freezing or memory leaks. Implemented client-side memory optimizations, efficient chunking, and responsive state synchronization to overcome browser bottlenecks.",
     techStack: ["JavaScript", "Frontend Data Optimization", "DOM Virtualization", "Web Engineering"],
     github: "https://github.com/Mithun202008/rpa-monitor",
     live: "https://rpa-monitor-six.vercel.app/",
-    metrics: ["50,000+ Records Handled", "0 FPS Degradation", "Client-Side Ingestion"]
+    metrics: ["Large-Scale Virtualization", "0 FPS Degradation", "Client-Side Ingestion"]
   },
   {
     id: "004",
@@ -108,48 +109,6 @@ export const projectsData = [
     github: "https://github.com/Mithun202008/parklink",
     live: null,
     metrics: ["Dynamic Reservations", "NoSQL Schema", "REST Integration"]
-  },
-  {
-    id: "006",
-    slug: "ecommerce-platform",
-    title: "Full-Stack E-Commerce Engine",
-    domain: "Web & Software",
-    status: "ARCHIVED",
-    featured: false,
-    tagline: "E-commerce platform featuring catalog filtering, shopping cart state management, and checkout flows.",
-    description: "Built an end-to-end full-stack e-commerce web platform. Implemented responsive product showcases, relational/document database schemas, state management for user carts, and checkout validation.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/Mithun202008/e-commerce-project",
-    live: null,
-    metrics: ["Cart State Sync", "Modular Catalog", "Secure APIs"]
-  },
-  {
-    id: "007",
-    slug: "chat-application",
-    title: "Real-Time WebSocket Chat Application",
-    domain: "Web & Software",
-    status: "ARCHIVED",
-    featured: false,
-    tagline: "Bidirectional real-time chat application with instant messaging rooms.",
-    description: "Constructed a low-latency real-time chat service leveraging WebSocket protocols. Supports active channel rooms, live typing indicators, and instant message broadcast across connected clients.",
-    techStack: ["JavaScript", "Node.js", "Socket.io", "Express.js", "HTML5/CSS3"],
-    github: "https://github.com/Mithun202008",
-    live: null,
-    metrics: ["Low-Latency Sockets", "Multi-Room Broadcast", "Client Sync"]
-  },
-  {
-    id: "008",
-    slug: "blogging-platform",
-    title: "Dynamic Content & Blogging Platform",
-    domain: "Web & Software",
-    status: "ARCHIVED",
-    featured: false,
-    tagline: "Markdown-powered content creation and publication platform.",
-    description: "Developed a dynamic web publication platform supporting rich text/Markdown authoring, tag-based categorization, article indexing, and responsive reading views.",
-    techStack: ["JavaScript", "Node.js", "Express.js", "REST APIs", "CSS3"],
-    github: "https://github.com/Mithun202008",
-    live: null,
-    metrics: ["Markdown Parsing", "Fast Article Indexing", "REST Architecture"]
   }
 ];
 
@@ -162,8 +121,6 @@ export const skillsData = [
       { name: "C++", level: "Data Structures & Systems", highlight: true },
       { name: "Python", level: "Scripting, Automation, Tools", highlight: true },
       { name: "JavaScript", level: "Modern ES6+", highlight: true },
-      { name: "Kotlin", level: "App Fundamentals", highlight: false },
-      { name: "Embedded C", level: "Hardware Systems", highlight: false },
       { name: "SQL", level: "Relational Queries", highlight: true }
     ]
   },
@@ -178,6 +135,15 @@ export const skillsData = [
       { name: "Express.js", level: "REST API Framework", highlight: true },
       { name: "HTML5 / CSS3", level: "Semantic Markup", highlight: false },
       { name: "REST APIs", level: "System Communication", highlight: true }
+    ]
+  },
+  {
+    category: "3D Design & Modeling",
+    code: "3D",
+    skills: [
+      { name: "Blender", level: "3D Modeling & Asset Creation", highlight: true },
+      { name: "Scene Design", level: "Lighting & Environment Setup", highlight: true },
+      { name: "3D Asset Optimization", level: "Hard Surface & Mesh Modeling", highlight: false }
     ]
   },
   {

@@ -30,11 +30,11 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-cyber-neon" />
               <span className="font-mono text-base font-bold tracking-wider text-cyber-heading">
-                MITHUN<span className="text-cyber-neon">.OS</span>
+                MITHUN <span className="text-cyber-neon">A</span>
               </span>
             </div>
             <p className="text-xs text-cyber-muted font-mono leading-relaxed">
-              Personal Engineering Command Center. Designed with cyber-resilient principles and clean architecture.
+              Personal Engineering Portfolio. Designed with high performance, clean aesthetics, and modern architecture.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="text-center font-mono text-xs space-y-1 bg-cyber-dark/40 py-3 px-4 rounded border border-cyber-border/40">
             <div className="flex items-center justify-center gap-2 text-cyber-cyan">
               <span className="w-2 h-2 rounded-full bg-cyber-neon animate-pulse"></span>
-              <span>SYSTEM ONLINE // {personalData.systemVersion}</span>
+              <span>ONLINE // AVAILABLE FOR OPPORTUNITIES</span>
             </div>
             <div className="text-cyber-muted text-[11px]">
               TIMESTAMP: <span className="text-cyber-text">{time || '2026-09-05 UTC'}</span>

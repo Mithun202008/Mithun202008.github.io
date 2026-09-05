@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Download, ArrowRight, Github, Linkedin, Mail, Code2, ShieldCheck, Cpu, HardDrive, Network } from 'lucide-react';
+import { Download, ArrowRight, Github, Linkedin, Mail, Code2, ShieldCheck, Cpu, HardDrive, Network, Box } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
-export default function Hero({ onOpenTerminal }) {
+export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -32,19 +32,19 @@ export default function Hero({ onOpenTerminal }) {
   }, [displayText, isDeleting, roleIndex, roles]);
 
   return (
-    <section id="home" className="relative min-h-[92vh] flex items-center pt-24 pb-16 z-10">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-24 pb-16 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Heading & Core Info */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Tactical System Breadcrumb */}
+            {/* Clean Breadcrumb */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-cyber-dark/80 border border-cyber-border text-xs font-mono text-cyber-muted">
               <span className="w-2 h-2 rounded-full bg-cyber-neon animate-pulse"></span>
-              <span className="text-cyber-neon font-semibold">SYS_ID // MITHUN_ANBAZHAGAN</span>
+              <span className="text-cyber-heading font-semibold">ENGINEER // MITHUN ANBAZHAGAN</span>
               <span className="text-cyber-border">::</span>
-              <span className="text-cyber-cyan">AUTHENTICATED</span>
+              <span className="text-cyber-cyan">TAMIL NADU, IN</span>
             </div>
 
             {/* Main Greeting Heading */}
@@ -64,7 +64,7 @@ export default function Hero({ onOpenTerminal }) {
 
             {/* Short Technical Introduction */}
             <p className="text-base sm:text-lg text-cyber-text/90 max-w-2xl font-sans leading-relaxed">
-              {personalData.bioHeadline} Specializing in high-concurrency CLI tooling, data-intensive web systems, and cloud infrastructure.
+              {personalData.bioHeadline} Specializing in high-concurrency CLI tooling, 3D modeling in Blender, secure network systems, and cloud infrastructure.
             </p>
 
             {/* Primary Action Buttons */}
@@ -131,24 +131,22 @@ export default function Hero({ onOpenTerminal }) {
 
           </div>
 
-          {/* Right Column: Original Futuristic Command Center HUD Visual */}
+          {/* Right Column: Clean Futuristic Telemetry Visual */}
           <div className="lg:col-span-5">
             <div className="relative rounded-lg bg-cyber-card/90 border border-cyber-border shadow-2xl p-4 sm:p-5 font-mono overflow-hidden cyber-glass">
               
-              {/* HUD Header */}
+              {/* Telemetry Header */}
               <div className="flex items-center justify-between pb-3 border-b border-cyber-border/70 text-xs">
                 <div className="flex items-center gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-cyber-red"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-cyber-amber"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-cyber-neon"></div>
-                  <span className="text-cyber-heading font-bold ml-1">MITHUN.OS // TELEMETRY</span>
+                  <span className="text-cyber-heading font-bold">SYSTEM TELEMETRY</span>
                 </div>
                 <span className="text-[10px] text-cyber-neon font-semibold px-2 py-0.5 rounded bg-cyber-dark border border-cyber-neon/30">
-                  SYS_ACTIVE
+                  ACTIVE
                 </span>
               </div>
 
-              {/* HUD Metrics Grid */}
+              {/* Telemetry Metrics Grid */}
               <div className="grid grid-cols-2 gap-2.5 my-3.5 text-xs">
                 <div className="p-2.5 rounded bg-cyber-dark/70 border border-cyber-border/60">
                   <div className="flex items-center justify-between text-cyber-muted text-[10px]">
@@ -168,52 +166,43 @@ export default function Hero({ onOpenTerminal }) {
 
                 <div className="p-2.5 rounded bg-cyber-dark/70 border border-cyber-border/60">
                   <div className="flex items-center justify-between text-cyber-muted text-[10px]">
-                    <span>CORE ROLE</span>
+                    <span>ACADEMIC</span>
                     <HardDrive className="w-3 h-3 text-cyber-amber" />
                   </div>
-                  <div className="text-cyber-heading font-bold mt-1">CSE 2ND YEAR</div>
+                  <div className="text-cyber-heading font-bold mt-1">B.E. CSE (CIT)</div>
                 </div>
 
                 <div className="p-2.5 rounded bg-cyber-dark/70 border border-cyber-border/60">
                   <div className="flex items-center justify-between text-cyber-muted text-[10px]">
-                    <span>SECURITY</span>
-                    <Network className="w-3 h-3 text-cyber-neon" />
+                    <span>3D MODELING</span>
+                    <Box className="w-3 h-3 text-cyber-neon" />
                   </div>
-                  <div className="text-cyber-cyan font-bold mt-1">SOCKS5 / PROXIES</div>
+                  <div className="text-cyber-cyan font-bold mt-1">BLENDER SUITE</div>
                 </div>
               </div>
 
-              {/* Simulated Live System Output Stream */}
-              <div className="p-3 rounded bg-cyber-void/90 border border-cyber-border/80 text-[11px] space-y-1.5 text-cyber-muted">
+              {/* Clean Output Stream */}
+              <div className="p-3.5 rounded bg-cyber-void/90 border border-cyber-border/80 text-[11px] space-y-2 text-cyber-muted">
                 <div className="text-cyber-cyan font-semibold">
-                  $ init-subsystems --security=strict
+                  $ verify-system-capabilities
                 </div>
                 <div className="text-cyber-text/80 pl-2">
-                  [✓] Loaded module: <span className="text-cyber-neon">proxc_engine_v1.4</span>
+                  [✓] Core Tool: <span className="text-cyber-neon">PROXC (Proxy Validator CLI)</span>
                 </div>
                 <div className="text-cyber-text/80 pl-2">
-                  [✓] Loaded module: <span className="text-cyber-neon">kali_tool_request</span>
+                  [✓] Submission: <span className="text-cyber-neon">Kali Linux Bug Tracker</span>
                 </div>
                 <div className="text-cyber-text/80 pl-2">
-                  [✓] Connected datastream: <span className="text-cyber-cyan">50k_records_rpa</span>
+                  [✓] 3D Asset Pipeline: <span className="text-cyber-amber">Blender Modeling</span>
                 </div>
                 <div className="text-cyber-text/80 pl-2">
-                  [✓] Algorithmic DSA: <span className="text-cyber-amber">370+ LeetCode Solved</span>
+                  [✓] Algorithmic DSA: <span className="text-cyber-cyan">370+ LeetCode Solved</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-cyber-neon pt-1">
-                  <span>&gt; system ready for inspection</span>
+                  <span>&gt; status: open for opportunities</span>
                   <span className="w-1.5 h-3 bg-cyber-neon animate-pulse inline-block"></span>
                 </div>
               </div>
-
-              {/* Interactive Terminal Trigger Pill */}
-              <button
-                onClick={onOpenTerminal}
-                className="w-full mt-3 py-2 px-3 rounded bg-cyber-dark/90 border border-cyber-border hover:border-cyber-cyan text-cyber-cyan text-xs flex items-center justify-center gap-2 hover:bg-cyber-surface transition-colors"
-              >
-                <Terminal className="w-3.5 h-3.5" />
-                <span>LAUNCH INTERACTIVE TERMINAL</span>
-              </button>
 
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Code2, Globe, Database, Shield, Cloud, Cpu, CheckCircle } from 'lucide-react';
+import { Search, Code2, Globe, Database, Shield, Cloud, Cpu, Box, CheckCircle } from 'lucide-react';
 import { skillsData } from '../data/portfolioData';
 
 export default function Skills() {
@@ -12,6 +12,7 @@ export default function Skills() {
     switch (category) {
       case 'Programming': return Code2;
       case 'Web & Full-Stack': return Globe;
+      case '3D Design & Modeling': return Box;
       case 'Databases': return Database;
       case 'Cybersecurity & Systems': return Shield;
       case 'Development & Cloud': return Cloud;

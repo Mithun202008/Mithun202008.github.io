@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import SystemBackground from './components/SystemBackground';
-import TerminalModal from './components/TerminalModal';
 import ProjectModal from './components/ProjectModal';
 import Footer from './components/Footer';
 
@@ -14,7 +13,6 @@ import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 
 export default function App() {
-  const [terminalOpen, setTerminalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
@@ -23,11 +21,11 @@ export default function App() {
       <SystemBackground />
 
       {/* Top Sticky Command Bar */}
-      <Navbar onOpenTerminal={() => setTerminalOpen(true)} />
+      <Navbar />
 
       {/* Main Command Center Sections */}
       <main className="relative z-10">
-        <Hero onOpenTerminal={() => setTerminalOpen(true)} />
+        <Hero />
         <About />
         <Skills />
         <Projects onSelectProject={(project) => setSelectedProject(project)} />
@@ -38,12 +36,6 @@ export default function App() {
 
       {/* Footer Telemetry */}
       <Footer />
-
-      {/* Interactive Terminal Shell (Ctrl+K or quick button) */}
-      <TerminalModal
-        isOpen={terminalOpen}
-        onClose={() => setTerminalOpen(false)}
-      />
 
       {/* Project Mission Inspection Drawer */}
       <ProjectModal
