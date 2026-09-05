@@ -1,12 +1,12 @@
 import React from 'react';
-import { Flag, Trophy, Shield, Code2, ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
+import { Flag, Trophy, Shield, Code2, ExternalLink, Calendar } from 'lucide-react';
 import { achievementsData } from '../data/portfolioData';
 
 export default function Achievements() {
   const getIcon = (category) => {
-    if (category.includes('Hackathon')) return Trophy;
     if (category.includes('Cybersecurity')) return Shield;
     if (category.includes('Algorithms')) return Code2;
+    if (category.includes('Web') || category.includes('Competition') || category.includes('Frontend')) return Trophy;
     return Flag;
   };
 
@@ -14,24 +14,24 @@ export default function Achievements() {
     <section id="missions" className="relative py-20 z-10 border-t border-cyber-border/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header: Futuristic Mission Log */}
         <div className="space-y-1 mb-12">
           <div className="flex items-center gap-2 font-mono text-xs text-cyber-neon tracking-wider">
             <span>// 04</span>
             <span className="w-6 h-px bg-cyber-neon"></span>
-            <span>MISSION TIMELINE</span>
+            <span>MISSION LOG</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-cyber-heading tracking-tight">
-            Missions & Technical Activities
+            Mission Log &amp; Field Operations
           </h2>
           <p className="text-xs sm:text-sm text-cyber-muted font-mono">
-            Chronological audit log of hackathon qualifications, cybersecurity CTFs, and algorithmic practice.
+            Chronological log of verified hackathon participation, competitive cybersecurity exercises, and algorithmic practice.
           </p>
         </div>
 
         {/* Timeline Log Container */}
         <div className="relative border-l border-cyber-border ml-4 sm:ml-6 space-y-8">
-          {achievementsData.map((item, index) => {
+          {achievementsData.map((item) => {
             const Icon = getIcon(item.category);
             return (
               <div key={item.id} className="relative pl-6 sm:pl-8 group">
@@ -79,7 +79,7 @@ export default function Achievements() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-mono text-cyber-amber hover:text-cyber-neon transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono text-cyber-amber hover:text-cyber-neon transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-cyber-neon rounded"
                       >
                         <span>INSPECT LEETCODE TELEMETRY</span>
                         <ExternalLink className="w-3 h-3" />

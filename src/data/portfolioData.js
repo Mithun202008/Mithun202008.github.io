@@ -56,20 +56,6 @@ export const projectsData = [
   },
   {
     id: "002",
-    slug: "muleguard-ai",
-    title: "MuleGuard AI — Cybercrime Intelligence Platform",
-    domain: "Cybersecurity & AI",
-    status: "RESEARCH & CONCEPT",
-    featured: true,
-    tagline: "Financial cyber-theft investigation platform designed to identify mule accounts and trace fraudulent transactions.",
-    description: "Designed a cybersecurity and intelligence framework targeting complex financial fraud schemes involving distributed mule accounts. Formulated graph-based transaction tracing pipelines and data integration flows to correlate multi-account transactions, detect anomaly spikes, and automate evidence compilation for forensic investigators.",
-    techStack: ["Cyber Investigation", "Fraud Analytics", "Data Integration", "AI-Assisted Forensics", "Network Graphing"],
-    github: "https://github.com/Mithun202008",
-    live: null,
-    metrics: ["Multi-Account Graphing", "Forensic Data Ingestion", "Pattern Analysis"]
-  },
-  {
-    id: "003",
     slug: "rpa-monitor",
     title: "RPA Monitor — Large-Scale Data Handling Web App",
     domain: "Web & Systems",
@@ -83,12 +69,12 @@ export const projectsData = [
     metrics: ["Large-Scale Virtualization", "0 FPS Degradation", "Client-Side Ingestion"]
   },
   {
-    id: "004",
+    id: "003",
     slug: "aetheris-ai",
     title: "Aetheris AI — Modern Interactive Web Interface",
     domain: "Frontend Engineering",
     status: "DEPLOYED",
-    featured: false,
+    featured: true,
     tagline: "Component-driven, responsive web interface emphasizing modern visual design aesthetics and type safety.",
     description: "Developed a modern, responsive web application interface showcasing component-based architecture in React, TypeScript type safety, and fast Vite bundling. Designed with high-contrast visual hierarchy, custom layout flows, and mobile-adaptive interfaces.",
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "UI/UX Architecture"],
@@ -97,7 +83,7 @@ export const projectsData = [
     metrics: ["100% Type-Safe", "Responsive Layout", "Component Architecture"]
   },
   {
-    id: "005",
+    id: "004",
     slug: "parklink",
     title: "ParkLink — Smart Parking Marketplace",
     domain: "Full-Stack Web",
@@ -109,6 +95,48 @@ export const projectsData = [
     github: "https://github.com/Mithun202008/parklink",
     live: null,
     metrics: ["Dynamic Reservations", "NoSQL Schema", "REST Integration"]
+  },
+  {
+    id: "005",
+    slug: "ecommerce-platform",
+    title: "Full-Stack E-Commerce Engine",
+    domain: "Full-Stack Web",
+    status: "COMPLETED",
+    featured: false,
+    tagline: "E-commerce platform featuring catalog filtering, shopping cart state management, and checkout flows.",
+    description: "Built an end-to-end full-stack e-commerce web platform. Implemented responsive product showcases, relational/document database schemas, state management for user carts, and checkout validation.",
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/Mithun202008/e-commerce-project",
+    live: null,
+    metrics: ["Cart State Sync", "Modular Catalog", "Secure APIs"]
+  },
+  {
+    id: "006",
+    slug: "chat-application",
+    title: "Real-Time WebSocket Chat Application",
+    domain: "Web & Systems",
+    status: "COMPLETED",
+    featured: false,
+    tagline: "Bidirectional real-time chat application with instant messaging rooms.",
+    description: "Constructed a low-latency real-time chat service leveraging WebSocket protocols. Supports active channel rooms, live typing indicators, and instant message broadcast across connected clients.",
+    techStack: ["JavaScript", "Node.js", "Socket.io", "Express.js", "HTML5/CSS3"],
+    github: "https://github.com/Mithun202008",
+    live: null,
+    metrics: ["Low-Latency Sockets", "Multi-Room Broadcast", "Client Sync"]
+  },
+  {
+    id: "007",
+    slug: "blogging-platform",
+    title: "Dynamic Content & Blogging Platform",
+    domain: "Web & Systems",
+    status: "COMPLETED",
+    featured: false,
+    tagline: "Markdown-powered content creation and publication platform.",
+    description: "Developed a dynamic web publication platform supporting rich text/Markdown authoring, tag-based categorization, article indexing, and responsive reading views.",
+    techStack: ["JavaScript", "Node.js", "Express.js", "REST APIs", "CSS3"],
+    github: "https://github.com/Mithun202008",
+    live: null,
+    metrics: ["Markdown Parsing", "Fast Article Indexing", "REST Architecture"]
   }
 ];
 
@@ -191,37 +219,29 @@ export const achievementsData = [
   {
     id: "01",
     title: "Frontend Battle — IIT Bhubaneswar",
-    category: "Hackathon / Competition",
-    status: "QUALIFIED ROUND 1",
-    description: "Participated and advanced to the first round of the competitive Frontend Battle hackathon conducted by IIT Bhubaneswar, engineering rapid UI under strict constraints.",
+    category: "Frontend Web Competition",
+    status: "PARTICIPANT",
+    description: "Participated in the competitive Frontend Battle technical challenge conducted by IIT Bhubaneswar, engineering rapid UI under strict constraints.",
     date: "2025 - 2026"
   },
   {
     id: "02",
     title: "Chandigarh Police Hackathon",
     category: "Cybersecurity & Tech Challenge",
-    status: "QUALIFIED ROUND 1",
-    description: "Participated and advanced to the first round of the national security challenge organized by Chandigarh Police, addressing law enforcement technical problems.",
+    status: "PARTICIPANT",
+    description: "Participated in the technical problem-solving hackathon organized by Chandigarh Police, addressing law enforcement technical problems.",
     date: "2025 - 2026"
   },
   {
     id: "03",
     title: "Competitive Capture The Flag (CTF)",
     category: "Cybersecurity Exercise",
-    status: "ACTIVE PARTICIPANT",
-    description: "Actively participated in competitive Capture The Flag cybersecurity competitions focusing on network forensics, web exploitation, and cryptanalysis.",
+    status: "COMPETITION / CTF PARTICIPANT",
+    description: "Participated in competitive Capture The Flag cybersecurity competitions focusing on network forensics, web exploitation, and cryptanalysis.",
     date: "Ongoing"
   },
   {
     id: "04",
-    title: "Smart India Hackathon (SIH)",
-    category: "National Hackathon",
-    status: "INSTITUTIONAL ROUNDS",
-    description: "Participated in the internal competitive selection and institutional problem statement rounds for Smart India Hackathon.",
-    date: "2025"
-  },
-  {
-    id: "05",
     title: "LeetCode Algorithmic Problem Solving",
     category: "Data Structures & Algorithms",
     status: "370+ PROBLEMS SOLVED",
@@ -233,19 +253,39 @@ export const achievementsData = [
 
 export const certificationsData = [
   {
+    id: "001",
     title: "Python Essentials 1",
     issuer: "Cisco Networking Academy",
-    date: "January 2026",
-    credentialId: "Verified Credential",
-    url: "https://www.credly.com/users/mithun-a.78d500ce/badges/credly",
-    domain: "Programming & Systems"
+    organization: "OpenEDG Python Institute",
+    issued: "January 19, 2026",
+    validity: "Lifetime Credential",
+    credentialType: "Student Credential",
+    level: "Foundational Programming",
+    description: "Demonstrates foundational Python programming knowledge, data structures, and procedural algorithmic design.",
+    url: "https://www.credly.com/users/mithun-a.78d500ce/badges/credly"
   },
   {
-    title: "MongoDB Basics",
-    issuer: "MongoDB University",
-    date: "Verified",
-    credentialId: "Verified Credential",
-    url: "https://www.credly.com/users/mithun-a.78d500ce/badges/credly",
-    domain: "Databases & Data Modeling"
+    id: "002",
+    title: "Gemini Certified Student – University",
+    issuer: "Google for Education",
+    organization: "Google",
+    issued: "03/07/2026",
+    validity: "03/07/2026 — 03/07/2029",
+    credentialType: "Certified Student",
+    level: "AI Competencies & Prompting",
+    description: "Demonstrates knowledge, skills, and foundational competencies required to apply Google AI and Gemini models.",
+    url: "https://www.credly.com/users/mithun-a.78d500ce/badges/credly"
+  },
+  {
+    id: "003",
+    title: "Claude 101",
+    issuer: "Anthropic",
+    organization: "Anthropic Educational Course",
+    issued: "Completed",
+    validity: "Certificate of Completion",
+    credentialType: "Certificate of Completion",
+    level: "AI & Developer Tools",
+    description: "Demonstrates completion of Anthropic's Claude 101 curriculum, prompt engineering principles, and generative AI capabilities.",
+    url: "#"
   }
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Cpu, Cloud, Box, GraduationCap, Award, Database, Network } from 'lucide-react';
+import { Shield, Cpu, Cloud, Box, GraduationCap } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function About() {

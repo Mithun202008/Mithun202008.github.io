@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, Github, Linkedin, Code2, ShieldAlert } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, Github, Linkedin, Code2 } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function Contact() {
@@ -113,33 +113,39 @@ export default function Contact() {
 
               {/* Professional Network Links */}
               <div className="pt-4 border-t border-cyber-border/60">
-                <span className="text-[10px] font-mono text-cyber-muted uppercase tracking-wider block mb-2.5">
+                <span className="text-[10px] font-mono text-cyber-muted uppercase tracking-wider block mb-3">
                   AUTHENTICATED PROFILES
                 </span>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="flex items-center gap-3">
                   <a
                     href={personalData.contacts.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-neon text-center text-xs font-mono text-cyber-text hover:text-cyber-neon transition-colors"
+                    aria-label="GitHub Profile"
+                    title="GitHub: Mithun202008"
+                    className="flex-1 h-11 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-neon text-cyber-muted hover:text-cyber-neon flex items-center justify-center transition-all hover:shadow-neon-sm hover:bg-cyber-neon/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-cyber-neon group"
                   >
-                    GitHub
+                    <Github className="w-5 h-5 transition-transform group-hover:scale-110" />
                   </a>
                   <a
                     href={personalData.contacts.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-cyan text-center text-xs font-mono text-cyber-text hover:text-cyber-cyan transition-colors"
+                    aria-label="LinkedIn Profile"
+                    title="LinkedIn Profile"
+                    className="flex-1 h-11 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-neon text-cyber-muted hover:text-cyber-neon flex items-center justify-center transition-all hover:shadow-neon-sm hover:bg-cyber-neon/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-cyber-neon group"
                   >
-                    LinkedIn
+                    <Linkedin className="w-5 h-5 transition-transform group-hover:scale-110" />
                   </a>
                   <a
                     href={personalData.contacts.leetcode}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-amber text-center text-xs font-mono text-cyber-text hover:text-cyber-amber transition-colors"
+                    aria-label="LeetCode Profile"
+                    title="LeetCode Profile (370+ Solved)"
+                    className="flex-1 h-11 rounded bg-cyber-dark border border-cyber-border hover:border-cyber-neon text-cyber-muted hover:text-cyber-neon flex items-center justify-center transition-all hover:shadow-neon-sm hover:bg-cyber-neon/5 focus:outline-none focus-visible:ring-1 focus-visible:ring-cyber-neon group"
                   >
-                    LeetCode
+                    <Code2 className="w-5 h-5 transition-transform group-hover:scale-110" />
                   </a>
                 </div>
               </div>

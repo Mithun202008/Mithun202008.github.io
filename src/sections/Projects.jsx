@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Terminal, Github, ExternalLink, ShieldAlert, Cpu, Layers, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Github, ExternalLink, ArrowUpRight } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 
 export default function Projects({ onSelectProject }) {
   const [activeFilter, setActiveFilter] = useState('ALL');
 
-  const filterOptions = ['ALL', 'FEATURED', 'Systems & Security', 'Web & Systems', 'Frontend Engineering', 'Full-Stack Web'];
+  const availableDomains = Array.from(new Set(projectsData.map((p) => p.domain)));
+  const filterOptions = ['ALL', 'FEATURED', ...availableDomains];
 
   const filteredProjects = projectsData.filter((project) => {
     if (activeFilter === 'ALL') return true;
     if (activeFilter === 'FEATURED') return project.featured;
-    return project.domain.toLowerCase().includes(activeFilter.toLowerCase());
+    return project.domain.toLowerCase() === activeFilter.toLowerCase();
   });
 
   return (
@@ -29,7 +30,7 @@ export default function Projects({ onSelectProject }) {
               Mission Files & Engineered Systems
             </h2>
             <p className="text-xs sm:text-sm text-cyber-muted font-mono">
-              Real software projects spanning network tooling, high-scale data UIs, and intelligence concepts.
+              Real software projects spanning network tooling, high-scale data virtualization, and full-stack web applications.
             </p>
           </div>
 

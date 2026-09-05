@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, ArrowRight, Github, Linkedin, Mail, Code2, ShieldCheck, Cpu, HardDrive, Network, Box } from 'lucide-react';
+import { Download, ArrowRight, Github, Linkedin, Mail, Code2, ShieldCheck, Cpu, HardDrive, Box } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function Hero() {
