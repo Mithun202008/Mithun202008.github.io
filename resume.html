@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithun A - Professional Software Engineering Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Rules */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f3f4f6;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.35;
+    }
+
+    /* Standard A4 Container */
+    .page-container {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      margin: 15px auto;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 11mm 13mm;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+      }
+      .page-container {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        max-height: 297mm;
+        padding: 11mm 13mm;
+      }
+    }
+
+    /* Grid Layout */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 29% 67%;
+      column-gap: 4%;
+      height: 100%;
+      align-items: start;
+    }
+
+    /* Left Sidebar */
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    /* Right Content Area */
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Profile Photo Frame */
+    .photo-container {
+      width: 36mm;
+      height: 36mm;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 1px auto;
+      border: 1.5px solid #0f172a;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      background-color: #f8fafc;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Name & Summary Header */
+    h1.name {
+      font-size: 23pt;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #0f172a;
+      line-height: 1.05;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .summary-text {
+      font-size: 9.1pt;
+      color: #334155;
+      line-height: 1.36;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .aoi-line {
+      font-size: 8.5pt;
+      color: #475569;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .aoi-line strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Section Headings with Divider Line */
+    .section-title {
+      font-size: 9.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid #cbd5e1;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-title .title-link {
+      font-size: 7.8pt;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .section-title .title-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Details */
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .contact-item {
+      font-size: 8.0pt;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .contact-item svg {
+      width: 12px;
+      height: 12px;
+      stroke: #475569;
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Technical Skills */
+    .skill-group {
+      margin-bottom: 5px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-category {
+      font-size: 8.1pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .skill-items {
+      font-size: 8.2pt;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    /* Education & Certifications */
+    .edu-title, .cert-title {
+      font-size: 9.0pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-sub, .cert-sub {
+      font-size: 8.4pt;
+      color: #334155;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+
+    .edu-meta, .cert-meta {
+      font-size: 8.0pt;
+      color: #64748b;
+      margin-top: 1px;
+    }
+
+    .cert-item {
+      margin-bottom: 5px;
+    }
+
+    .cert-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cgpa-badge {
+      display: inline-block;
+      margin-top: 3px;
+      font-size: 8.0pt;
+      font-weight: 600;
+      color: #0f172a;
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Projects */
+    .project-card {
+      margin-bottom: 8px;
+    }
+
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .project-title {
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .project-title a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+
+    .project-title a:hover {
+      color: #1e40af;
+    }
+
+    .project-tech {
+      font-size: 8.1pt;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2px;
+    }
+
+    .bullet-list li {
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.33;
+    }
+
+    .bullet-list li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .bullet-list a {
+      color: #1e40af;
+      text-decoration: none;
+    }
+
+    .bullet-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="resume-grid">
+      
+      <!-- LEFT SIDEBAR -->
+      <aside class="left-column">
+        
+        <!-- PROFILE PHOTO -->
+        <div class="photo-container">
+          <img src="photocopy.jpeg" alt="Mithun A" class="profile-photo">
+        </div>
+
+        <!-- CONTACT -->
+        <section>
+          <h2 class="section-title">Contact</h2>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:mithunanbazhagan@gmail.com">mithunanbazhagan@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 8825671929</span>
+            </li>
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <a href="https://mithun202008.github.io/" target="_blank">mithun202008.github.io</a>
+            </li>
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://linkedin.com/in/mithun-a-0792a6353/" target="_blank">mithun-a-0792a6353</a>
+            </li>
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <a href="https://github.com/Mithun202008" target="_blank">github.com/Mithun202008</a>
+            </li>
+            <li class="contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Tamil Nadu, India</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section>
+          <h2 class="section-title">Technical Skills</h2>
+          
+          <div class="skill-group">
+            <div class="skill-category">Programming</div>
+            <div class="skill-items">C, C++, Python, Java, JavaScript, SQL, Kotlin, Embedded C</div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-category">Web & Software</div>
+            <div class="skill-items">HTML, CSS, JavaScript, React.js, TypeScript, Tailwind CSS, Node.js, Express.js, Flask, REST APIs</div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-category">Databases</div>
+            <div class="skill-items">MySQL, MongoDB</div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-category">Tools & Platforms</div>
+            <div class="skill-items">Git, GitHub, VS Code, Linux, Fedora, Kali Linux, VMware, VirtualBox</div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-category">Core CS</div>
+            <div class="skill-items">Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks</div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-category">Other</div>
+            <div class="skill-items">Cloud Computing, Cybersecurity, Ethical Hacking, Burp Suite</div>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h2 class="section-title">Education</h2>
+          <div class="edu-title">Chennai Institute of Technology</div>
+          <div class="edu-sub">B.E. Computer Science and Engineering</div>
+          <div class="edu-meta">2025 – 2029 | 2nd Year</div>
+          <div class="cgpa-badge">CGPA: 8.55 / 10</div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+          <h2 class="section-title">
+            Certifications
+            <a href="https://www.credly.com/users/mithun-a.78d500ce/badges/credly" target="_blank" class="title-link">Credly ↗</a>
+          </h2>
+          
+          <div class="cert-item">
+            <div class="cert-title">Python Essentials 1</div>
+            <div class="cert-sub">Cisco Networking Academy</div>
+            <div class="cert-meta">Issued January 2026</div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-title">MongoDB Basics</div>
+            <div class="cert-sub">MongoDB University</div>
+            <div class="cert-meta">Verified Credential</div>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- RIGHT MAIN COLUMN -->
+      <main class="right-column">
+        
+        <!-- HEADER -->
+        <header>
+          <h1 class="name">Mithun A</h1>
+          <p class="summary-text">
+            Second-year Computer Science & Engineering student (8.55 CGPA) with hands-on experience building open-source CLI utilities, data-intensive web platforms, and responsive frontends. Demonstrates solid software engineering fundamentals across multithreaded systems, Linux environment automation, network protocols, and data structures.
+          </p>
+          <div class="aoi-line">
+            <strong>Area of Interest:</strong> Cloud Computing • Networking
+          </div>
+        </header>
+
+        <!-- PROJECTS -->
+        <section>
+          <h2 class="section-title">Projects</h2>
+
+          <!-- PROXC -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-title">
+                <a href="https://github.com/Mithun202008/proxychk" target="_blank">
+                  PROXC — Proxy Validation & Analysis Engine
+                </a>
+              </div>
+              <div class="project-tech">Python • Multithreading • Linux</div>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                Engineered an open-source command-line tool for concurrent validation and health analysis of <strong>HTTP, HTTPS, SOCKS4, and SOCKS5</strong> proxies with configurable timeouts and custom target URL validation.
+              </li>
+              <li>
+                Designed robust data processing features including <strong>automatic CSV field detection</strong>, multi-format file input (CSV/TXT/LST), real-time streaming output, and structured working-proxy export.
+              </li>
+              <li>
+                Architected automated testing suites and cross-platform distribution packages, releasing <strong>Debian/Kali Linux packages</strong>, PyPI installation, Linux/macOS shell scripts, and Windows PowerShell installers.
+              </li>
+            </ul>
+          </article>
+
+          <!-- RPA MONITOR -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-title">
+                <a href="https://github.com/Mithun202008/rpa-monitor" target="_blank">
+                  RPA Monitor — Web Data Handling Platform
+                </a>
+              </div>
+              <div class="project-tech">JavaScript • DOM Optimization • Web Dev</div>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                Developed a data-heavy web application simulating and processing <strong>50,000+ data records</strong> directly within the browser interface to model real-world enterprise RPA workflows.
+              </li>
+              <li>
+                Implemented client-side data management strategies to ensure responsive UI rendering, efficient state updates, and smooth navigation through large datasets without performance degradation.
+              </li>
+            </ul>
+          </article>
+
+          <!-- AETHERIS AI -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-title">
+                <a href="https://github.com/Mithun202008/Aetheris-AI" target="_blank">
+                  Aetheris AI — Interactive Modern Web Interface
+                </a>
+              </div>
+              <div class="project-tech">React • TypeScript • Vite • Tailwind CSS</div>
+            </div>
+            <ul class="bullet-list">
+              <li>
+                Designed and built a sleek modern web frontend utilizing <strong>component-based React architecture</strong>, TypeScript type-safety, and responsive layout patterns.
+              </li>
+              <li>
+                Focused on UI design aesthetics, micro-interactions, and visual hierarchy to deliver an engaging user experience across desktop and mobile viewports.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- OPEN SOURCE & ENGINEERING -->
+        <section>
+          <h2 class="section-title">Open Source & Engineering</h2>
+          <ul class="bullet-list">
+            <li>
+              <strong>Open-Source Tool Maintenance:</strong> Independently built and published PROXC as a fully documented open-source utility with automated testing pipelines, cross-platform installers, and Debian packaging.
+            </li>
+            <li>
+              <strong>Community Contribution:</strong> Submitted PROXC to the Kali Linux Bug Tracker for consideration as a new tool within the pentesting ecosystem.
+            </li>
+          </ul>
+        </section>
+
+        <!-- COMPETITIONS & ACTIVITIES -->
+        <section>
+          <h2 class="section-title">Competitions & Activities</h2>
+          <ul class="bullet-list">
+            <li>
+              Participated and advanced to the first round of the <strong>Frontend Battle</strong> competition conducted by IIT Bhubaneswar.
+            </li>
+            <li>
+              Participated and advanced to the first round of the <strong>Chandigarh Police Hackathon</strong>.
+            </li>
+            <li>
+              Participated in a competitive <strong>Capture The Flag (CTF)</strong> cybersecurity challenge.
+            </li>
+            <li>
+              Solved <strong><a href="https://leetcode.com/u/mithunanbazhagan/" target="_blank">370+ algorithmic problems on LeetCode</a></strong>, demonstrating consistent practice in Data Structures & Algorithms.
+            </li>
+          </ul>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>
