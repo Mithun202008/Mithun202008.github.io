@@ -28,7 +28,7 @@ export const personalData = {
     "3D Modeling & Design",
     "Problem Solving / DSA"
   ],
-  resumeLink: "https://drive.google.com/file/d/1fEmkQrOt0pAiUJDFTTJ8DDyUnEIepaEI/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1eZ6btXG2So2zh_fDwdeMv4BSao3i7DhH/view?usp=drive_link",
   contacts: {
     email: "mithunanbazhagan@gmail.com",
     phone: "+91 8825671929",
